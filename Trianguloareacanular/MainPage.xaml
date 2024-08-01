@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Trianguloareacanular.ViewsModels"
+             x:Class="Trianguloareacanular.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:MainViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="10">
+        <Entry Text="{Binding A}" Placeholder="Coloque el primer digito" Keyboard="Numeric" Margin="10" />
+        <Entry Text="{Binding B}" Placeholder="Coloque el segundo digito" Keyboard="Numeric" Margin="10" />
+        <Entry Text="{Binding C}" Placeholder="Coloque el ultimo digito" Keyboard="Numeric" Margin="10" />
+        <Button Text="Calcular Area" Command="{Binding CalcularAreaCommand}" Margin="10"/>
+        <Entry Text="{Binding Area}" Placeholder="Resultado" Margin="10" />
+    </StackLayout>
+
+
+
+</ContentPage>
